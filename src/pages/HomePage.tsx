@@ -4,6 +4,7 @@ import { FeeFreeSection } from '../components/sections/FeeFreeSection/FeeFreeSec
 import { CustomProfileSection } from '../components/sections/CustomProfileSection/CustomProfileSection'
 import { GetStartedSection } from '../components/sections/GetStartedSection/GetStartedSection'
 import { FaqSection } from '../components/sections/FaqSection/FaqSection'
+import { SiteFooter } from '../components/layout/SiteFooter/SiteFooter'
 
 export function HomePage() {
   return (
@@ -14,6 +15,7 @@ export function HomePage() {
       <CustomProfileSection />
       <GetStartedSection />
       <FaqSection />
+      <SiteFooter />
     </>
   )
 }
