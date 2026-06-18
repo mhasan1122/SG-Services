@@ -1,16 +1,16 @@
-.features-section {
+.fee-free-section {
   background-color: #ffffff;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: var(--section-padding-y) var(--section-padding-x)
-    var(--section-padding-between);
+  padding: var(--section-padding-between) var(--section-padding-x)
+    var(--section-padding-y);
   overflow: visible;
 }
 
-.features-section__container {
+.fee-free-section__container {
   width: 100%;
   max-width: 1126px;
   display: grid;
@@ -21,14 +21,14 @@
   overflow: visible;
 }
 
-.features-section__text {
+.fee-free-section__text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
 }
 
-.features-section__badge {
+.fee-free-section__badge {
   background-color: var(--section-badge-bg);
   color: var(--section-text);
   font-size: 14px;
@@ -40,16 +40,16 @@
   letter-spacing: 0.5px;
 }
 
-.features-section__title {
+.fee-free-section__title {
   font-size: clamp(30px, 4.5vw, 44px);
   font-weight: 700;
-  color: var(--section-text);
+  color: #11142d;
   margin: 0 0 24px;
   line-height: 1.25;
   letter-spacing: -1px;
 }
 
-.features-section__desc {
+.fee-free-section__desc {
   font-size: clamp(15px, 1.8vw, 18px);
   line-height: 1.7;
   color: var(--section-text-muted);
@@ -57,33 +57,34 @@
 }
 
 @media (max-width: 1024px) {
-  .features-section {
-    padding: var(--section-padding-y) 40px var(--section-padding-between);
+  .fee-free-section {
+    padding: var(--section-padding-between) 40px var(--section-padding-y);
   }
 
-  .features-section__container {
+  .fee-free-section__container {
     gap: 48px;
   }
 }
 
 @media (max-width: 900px) {
-  .features-section {
-    padding: var(--section-padding-y) 24px var(--section-padding-between);
+  .fee-free-section {
+    padding: var(--section-padding-between) 24px var(--section-padding-y);
   }
 
-  .features-section__container {
+  .fee-free-section__container {
     grid-template-columns: 1fr;
     gap: 48px;
   }
 
-  .features-section__text {
+  .fee-free-section__text {
     align-items: center;
     text-align: center;
+    order: -1;
   }
 }
 
 @media (max-width: 640px) {
-  .features-section {
-    padding: 48px 16px 32px;
+  .fee-free-section {
+    padding: 32px 16px 48px;
   }
 }
