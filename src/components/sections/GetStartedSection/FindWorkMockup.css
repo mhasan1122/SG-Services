@@ -1,0 +1,59 @@
+.find-work-mockup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.find-work-mockup__scene {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.find-work-mockup__card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 0 36px 36px 0;
+  padding: 12px 12px 12px 0;
+  overflow: hidden;
+  box-shadow:
+    0 28px 60px -18px rgba(41, 84, 148, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+.find-work-mockup__dashboard {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0 22px 22px 0;
+}
+
+@media (max-width: 900px) {
+  .find-work-mockup {
+    justify-content: center;
+    order: 1;
+  }
+
+  .find-work-mockup__card {
+    border-radius: 36px;
+    padding: 12px;
+  }
+
+  .find-work-mockup__dashboard {
+    border-radius: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .find-work-mockup__card {
+    border-radius: 28px;
+    padding: 10px;
+  }
+
+  .find-work-mockup__dashboard {
+    border-radius: 18px;
+  }
+}
