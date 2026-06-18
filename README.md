@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# RemoteRecruit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing landing page for [RemoteRecruit](https://remoterecruit1.netlify.app/) — a platform connecting remote workers with employers.
 
-Currently, two official plugins are available:
+**Live site:** [https://remoterecruit1.netlify.app/](https://remoterecruit1.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Project setup
 
-## React Compiler
+**Prerequisites:** Node.js 20+ and npm.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Install dependencies
+npm install
 
-## Expanding the ESLint configuration
+# Start the dev server (http://localhost:5173)
+npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Production build (output in dist/)
+npm run build
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Preview the production build locally
+npm run preview
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Run ESLint
+npm run lint
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Deploy:** The site is hosted on Netlify. Connect the repo and use:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Build command:** `npm run build`
+- **Publish directory:** `dist`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Framework & libraries
+
+| Category | Technology |
+|----------|------------|
+| UI | [React](https://react.dev/) 19 |
+| Language | [TypeScript](https://www.typescriptlang.org/) |
+| Build tool | [Vite](https://vite.dev/) 8 |
+| Styling | [Tailwind CSS](https://tailwindcss.com/) 4 (via `@tailwindcss/vite`) + component CSS modules |
+| Linting | ESLint with TypeScript and React plugins |
+
+The app is a single static page with no client-side router or backend dependencies.
+
+## Known issues & limitations
+
+- **Placeholder links** — Sign In, Sign Up, Get Started, FAQ, and social links use `#` anchor URLs; there is no auth flow or backend integration yet.
+- **Single page only** — No multi-page routing; all content lives on the home page.
+- **Large image assets** — Hero and background images are several MB each, which can slow initial load on slower connections. Consider compressing or serving responsive/WebP variants.
+- **Default page metadata** — The HTML `<title>` is still the Vite template default (`React Vite TypeScript App`).
+- **Unused pricing component** — `PricingSection` exists in the codebase but is not rendered; pricing UI is implemented inside `SiteFooter` instead.
+- **Asset filenames** — Some source images include spaces in their names (e.g. `Find Work.png`), which works with Vite but is awkward for tooling and URLs.
