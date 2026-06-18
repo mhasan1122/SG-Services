@@ -1,11 +1,17 @@
 import { logoImg } from '../../../assets'
+import { LazyImage } from '../../ui/LazyImage/LazyImage'
 import './SiteHeader.css'
 
 export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-header__logo">
-        <img src={logoImg} className="site-header__logo-img" alt="RemoteRecruit Logo" />
+        <LazyImage
+          src={logoImg}
+          className="site-header__logo-img"
+          alt="RemoteRecruit Logo"
+          eager
+        />
       </div>
       <div className="site-header__actions">
         <a href="#signin" className="site-header__link">

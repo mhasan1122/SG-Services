@@ -4,6 +4,7 @@ import {
   rBadgeImg,
   gruAvatarImg,
 } from '../../../assets'
+import { LazyImage } from '../../ui/LazyImage/LazyImage'
 import { ProfileCard } from './ProfileCard'
 import './FeatureMockup.css'
 
@@ -11,7 +12,7 @@ export function FeatureMockup() {
   return (
     <div className="feature-mockup">
       <div className="feature-mockup__scene">
-        <img
+        <LazyImage
           src={decorDotImg}
           className="feature-mockup__dot"
           alt=""
@@ -19,7 +20,7 @@ export function FeatureMockup() {
         />
 
         <div className="feature-mockup__card">
-          <img
+          <LazyImage
             src={dashboardMockupImg}
             className="feature-mockup__dashboard"
             alt="RemoteRecruit dashboard preview"
@@ -42,7 +43,7 @@ export function FeatureMockup() {
             />
           </div>
 
-          <img
+          <LazyImage
             src={rBadgeImg}
             className="feature-mockup__badge"
             alt=""

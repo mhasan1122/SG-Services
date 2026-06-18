@@ -1,4 +1,5 @@
 import { logoImg, rBadgeImg } from '../../../assets'
+import { LazyImage } from '../../ui/LazyImage/LazyImage'
 import './SiteFooter.css'
 
 const SOCIAL_LINKS = [
@@ -236,7 +237,11 @@ export function SiteFooter() {
         <div className="site-footer__inner">
           <div className="site-footer__main">
             <a href="/" className="site-footer__logo" aria-label="RemoteRecruit home">
-              <img src={logoImg} className="site-footer__logo-img" alt="Remote Recruit" />
+              <LazyImage
+                src={logoImg}
+                className="site-footer__logo-img"
+                alt="Remote Recruit"
+              />
             </a>
 
             <div className="site-footer__social">
@@ -254,7 +259,7 @@ export function SiteFooter() {
           </div>
 
           <div className="site-footer__bottom">
-            <img
+            <LazyImage
               src={rBadgeImg}
               className="site-footer__badge"
               alt=""

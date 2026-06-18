@@ -1,4 +1,5 @@
 import { decorDotImg, paypalImg, rBadgeImg } from '../../../assets'
+import { LazyImage } from '../../ui/LazyImage/LazyImage'
 import './MembershipCard.css'
 
 const FEATURES = [
@@ -34,7 +35,7 @@ export function MembershipCard() {
   return (
     <div className="membership-card">
       <div className="membership-card__scene">
-        <img
+        <LazyImage
           src={decorDotImg}
           className="membership-card__dot"
           alt=""
@@ -57,7 +58,7 @@ export function MembershipCard() {
         </div>
 
         <div className="membership-card__payment">
-          <img
+          <LazyImage
             src={paypalImg}
             className="membership-card__paypal-icon"
             alt=""
@@ -69,7 +70,7 @@ export function MembershipCard() {
           </div>
         </div>
 
-        <img
+        <LazyImage
           src={rBadgeImg}
           className="membership-card__badge"
           alt=""

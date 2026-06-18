@@ -1,3 +1,4 @@
+import { LazyImage } from '../../ui/LazyImage/LazyImage'
 import './ProfileCard.css'
 
 type ProfileCardProps = {
@@ -30,7 +31,7 @@ export function ProfileCard({
 
   return (
     <div className={className}>
-      <img src={avatarSrc} className="profile-card__avatar" alt="" />
+      <LazyImage src={avatarSrc} className="profile-card__avatar" alt="" aria-hidden="true" />
       <div className="profile-card__info">
         <span
           className={`profile-card__role${lightRole ? ' profile-card__role--light' : ''}`}

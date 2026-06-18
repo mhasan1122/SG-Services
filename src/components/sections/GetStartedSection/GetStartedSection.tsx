@@ -1,4 +1,5 @@
 import { decorDotImg } from '../../../assets'
+import { LazyImage } from '../../ui/LazyImage/LazyImage'
 import { FindWorkMockup } from './FindWorkMockup'
 import './GetStartedSection.css'
 
@@ -27,7 +28,7 @@ export function GetStartedSection() {
         <span className="get-started-section__sun" />
       </div>
 
-      <img
+      <LazyImage
         src={decorDotImg}
         className="get-started-section__dot"
         alt=""

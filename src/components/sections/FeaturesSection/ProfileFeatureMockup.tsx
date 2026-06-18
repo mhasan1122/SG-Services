@@ -1,4 +1,5 @@
 import { decorDotImg, profileMockupImg, gruAvatarImg } from '../../../assets'
+import { LazyImage } from '../../ui/LazyImage/LazyImage'
 import './ProfileFeatureMockup.css'
 
 const SKILLS = [
@@ -14,7 +15,7 @@ export function ProfileFeatureMockup() {
   return (
     <div className="profile-feature-mockup">
       <div className="profile-feature-mockup__scene">
-        <img
+        <LazyImage
           src={decorDotImg}
           className="profile-feature-mockup__dot"
           alt=""
@@ -23,7 +24,7 @@ export function ProfileFeatureMockup() {
 
         <div className="profile-feature-mockup__card">
           <div className="profile-feature-mockup__profile-wrap">
-            <img
+            <LazyImage
               src={profileMockupImg}
               className="profile-feature-mockup__profile"
               alt="Custom profile preview"
@@ -39,7 +40,7 @@ export function ProfileFeatureMockup() {
               </svg>
             </button>
 
-            <img
+            <LazyImage
               src={gruAvatarImg}
               className="profile-feature-mockup__floating-avatar"
               alt=""
@@ -48,10 +49,11 @@ export function ProfileFeatureMockup() {
           </div>
 
           <div className="profile-feature-mockup__feedback">
-            <img
+            <LazyImage
               src={gruAvatarImg}
               className="profile-feature-mockup__feedback-avatar"
               alt=""
+              aria-hidden="true"
             />
             <div className="profile-feature-mockup__feedback-text">
               <span className="profile-feature-mockup__feedback-label">
