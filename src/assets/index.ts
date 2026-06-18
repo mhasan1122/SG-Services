@@ -1,0 +1,6 @@
+export { default as logoImg } from './Logo.png'
+export { default as heroBackgroundImg } from './HERO Section.png'
+export { default as decorDotImg } from './Ellipse 55.png'
+export { default as dashboardMockupImg } from './Rectangle 104.png'
+export { default as rBadgeImg } from './Group 132.png'
+export { default as gruAvatarImg } from './20170315-ShowbizInsider-DespicableMe-696x464-696x430.png'
